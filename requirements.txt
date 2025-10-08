@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+databases[asyncpg]  # if using PostgreSQL async driver
+eth_account  # for Ethereum signature verification

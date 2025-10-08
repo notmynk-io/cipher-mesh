@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decentralized Messaging – Slack Style Mockup</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Navigation Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-top">
+        <div class="logo">🟣</div>
+        <ul class="sidebar-nav">
+          <li class="active"><span>🏠</span></li>
+          <li><span>💬</span></li>
+          <li><span>⚡</span></li>
+          <li><span>🔔</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-bottom">
+        <img class="sidebar-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" />
+      </div>
+    </nav>
+
+    <!-- Channels & DMs List -->
+    <aside class="channels">
+      <div class="channels-header">
+        <span class="team-name">Acme Inc</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="channels-section">
+        <ul>
+          <li class="active"># general</li>
+          <li># design-team</li>
+          <li># social-media</li>
+          <li># announcements</li>
+        </ul>
+      </div>
+      <div class="channels-section">
+        <div class="channels-section-title">Direct Messages</div>
+        <ul>
+          <li>
+            <img class="dm-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="DM" />
+            Alice
+            <span class="badge">2</span>
+          </li>
+          <li>
+            <img class="dm-avatar" src="https://randomuser.me/api/portraits/women/5.jpg" alt="DM" />
+            Bob
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Chat Section -->
+    <main class="chat">
+      <header class="chat-header">
+        <div class="chat-title">
+          # general
+          <span class="chat-description">All team discussions and updates</span>
+        </div>
+        <div class="chat-users">
+          <img class="user-chip" src="https://randomuser.me/api/portraits/men/1.jpg" />
+          <img class="user-chip" src="https://randomuser.me/api/portraits/women/5.jpg" />
+          <img class="user-chip" src="https://randomuser.me/api/portraits/women/44.jpg" />
+        </div>
+      </header>
+      <section class="messages" id="messagesContainer">
+        <div class="message">
+          <img class="message-avatar" src="https://randomuser.me/api/portraits/women/5.jpg" />
+          <div class="message-content">
+            <div class="message-user">Alice <span class="message-time">12:55 PM</span></div>
+            <div class="message-text">Welcome everyone to the new team channel! 🎉</div>
+          </div>
+        </div>
+        <div class="message self">
+          <img class="message-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" />
+          <div class="message-content">
+            <div class="message-user">You <span class="message-time">12:56 PM</span></div>
+            <div class="message-text">Glad to be here! Looking forward to collaborating.</div>
+          </div>
+        </div>
+        <div class="message">
+          <img class="message-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" />
+          <div class="message-content">
+            <div class="message-user">Carol <span class="message-time">12:58 PM</span></div>
+            <div class="message-text">@Alice Shall we start with today’s agenda?</div>
+          </div>
+        </div>
+      </section>
+      <footer class="chat-input">
+        <button class="icon-btn">😊</button>
+        <input id="messageInput" type="text" placeholder="Message #general" autocomplete="off" />
+        <button class="icon-btn">+</button>
+        <button class="send-btn">Send</button>
+      </footer>
+    </main>
+
+    <!-- Right Sidebar (optional) -->
+    <aside class="details">
+      <div class="details-header">
+        <span>Channel Details</span>
+      </div>
+      <div id="messageDetails" class="details-section">
+        <div class="details-section-title">Message Details</div>
+        <div class="details-content">
+            <div class="detail-item">
+                <strong>Encryption:</strong> <span id="encryptionStatus">-</span>
+            </div>
+            <div class="detail-item">
+                <strong>Read Receipt:</strong> <span id="readReceipt">-</span>
+            </div>
+            <div class="detail-item">
+                <strong>Delete At:</strong> <span id="deleteAt">-</span>
+            </div>
+        </div>
+      </div>
+      <!-- Additional info / members / files can go here -->
+    </aside>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
